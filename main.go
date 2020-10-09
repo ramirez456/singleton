@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	client_one "singleton/client.one"
+	client_tree "singleton/client.tree"
 	client_two "singleton/client.two"
 	singleton "singleton/single"
 	"sync"
@@ -19,6 +20,10 @@ func main() {
 		go func() {
 			defer wg.Done()
 			client_two.IncrementAge()
+		}()
+		go func() {
+			defer wg.Done()
+			client_tree.IncrementAge()
 		}()
 	}
 

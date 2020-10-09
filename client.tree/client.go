@@ -1,4 +1,4 @@
-package client_two
+package client_tree
 
 import (
 	singleton "singleton/single"
